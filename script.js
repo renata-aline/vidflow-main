@@ -7,7 +7,7 @@ const api = fetch("http://localhost:3000/videos")
       containerVideos.innerHTML += `
        <li class="videos__item">
        <iframe src="${video.url}" title"${video.titulo}" frameborder="0" allowfullscreen></iframe>
-       <div class="descriçao-video">
+       <div class="descricao-video">
         <img class="img-canal" src="${video.imagem}" alt="Logo do canal">
         <h3 class="titulo-video">${video.titulo}</h3>
         <p class="titulo-canal">${video.descricao}</p>
@@ -15,4 +15,7 @@ const api = fetch("http://localhost:3000/videos")
        </li>
        `;
     })
-  );
+  )
+  .catch((error) => {
+    containerVideos.innerHTML = `<p> Houve um erro ao recarregar os videos: ${error} </p>`;
+  });
