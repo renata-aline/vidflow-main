@@ -66,3 +66,17 @@ function filtrarPesquisa() {
       : "block";
   });
 }
+
+const botaoCategoria = document.querySelectorAll(".superior__item");
+
+botaoCategoria.forEach((botao) => {
+  let nomeCategoria = botao.setAttribute("name");
+  botao.addEventListener("click", () => filtrarPorCategoria(nomeCategoria));
+})
+
+function filtrarPorCategoria(filtro){
+  const videos = document.querySelectorAll(".videos__item")
+  for(let video for videos){
+    
+  }
+}
