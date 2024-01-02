@@ -23,3 +23,20 @@ async function buscarEMostrarVideos() {
 }
 
 buscarEMostrarVideos();
+
+const barraDePesquisa = document.querySelector(".pesquisar__input");
+
+barraDePesquisa.addEventListener("input", filtrarpesquisa);
+
+
+function filtrarpesquisa(){
+  const videos = document.querySelectorAll(".videos__item");
+
+  if(barraDePesquisa.value!= ""){
+
+  }else{
+    
+  }
+}
+
+
